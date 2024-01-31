@@ -1,4 +1,7 @@
 import { useState } from "react";
+import MontlyPlan from "./MontlyPlan";
+import GenExcel from "./GenExcel";
+import AddHelper from "./AddHelper";
 
 
 function CustomerData() {
@@ -6,8 +9,30 @@ function CustomerData() {
   const [statusGenExcel, setStatusGenExcel] = useState(false);
   const [statusAddHelper, setStatusAddHelper] = useState(false);
   
+  // const [changeColor, setChangeColor] = useState(false);
 
+  // const handleClick = () => {
+  //   setChangeColor(!changeColor);
+  // }
 
+  const handleClick =() => {
+    setStatusMontlyPlan(true);
+    setStatusGenExcel(false);
+    setStatusAddHelper(false);
+  }
+
+  const handleClickGenExcel = () => {
+    setStatusGenExcel(true);
+    setStatusMontlyPlan(false);
+    setStatusAddHelper(false);
+  }
+
+  const handleAddHelper = () => {
+    setStatusGenExcel(false);
+    setStatusMontlyPlan(false);
+    setStatusAddHelper(true);
+  }
+  
   return (
     <div className="w-[95vw] h-[70vh] mx-auto mt-4 ">
       <header className="bg-yellow-300 w-[95vw] h-[8vh] text-2xl font-bold py-2 px-10 rounded-tl-full ">
@@ -19,27 +44,49 @@ function CustomerData() {
           {/* buttons */}
         <div className="flex gap-1 ">
           <div >
-            <button className= " mt-2 ml-4 p-1 bg-yellow-300 font-semibold rounded-lg wrapper "
+            <button onClick={handleClick} className={ ` mt-2 ml-4 p-1 bg-yellow-300 font-semibold rounded-lg wrapper 
+            ${(statusMontlyPlan === true) ? 'text-white' : 'text-black'}`}
              >Montly Plan </button>
-            
+           
           </div>
 
           <div>
-            <button className="  mt-2 ml-4 p-1 bg-yellow-300 font-semibold rounded-lg "> Generate Excel Sheet </button>
+            <button onClick={handleClickGenExcel} className={ ` mt-2 ml-4 p-1 bg-yellow-300 font-semibold rounded-lg wrapper 
+            ${(statusGenExcel === true) ? 'text-white' : 'text-black'}`}> Generate Excel Sheet </button>
           </div>
 
           <div>
-            <button className=" mt-2 ml-4 p-1 bg-yellow-300 font-semibold rounded-lg "> Add Helper </button>
+            <button onClick={handleAddHelper} className={ ` mt-2 ml-4 p-1 bg-yellow-300 font-semibold rounded-lg wrapper 
+            ${(statusAddHelper === true) ? 'text-white' : 'text-black'}`}> Add Helper </button>
           </div>
         </div>
 
         {/* content */}
         <div>
           <div>
-
+          {
+              statusMontlyPlan ? (<MontlyPlan/>) : null
+          }
+          {
+              statusGenExcel ? (<GenExcel/>) : null
+          }
+          {
+              statusAddHelper ? (<AddHelper/>) : null
+          }
           </div>
-        </div>
 
+        </div>
+        
+
+
+
+
+        <footer className="mb-2">
+          <button className="bg-yellow-400 px-8 border border-black outline-8 rounded-md
+          ">
+            Close
+          </button>
+        </footer>
       </div>
     </div>
   )
