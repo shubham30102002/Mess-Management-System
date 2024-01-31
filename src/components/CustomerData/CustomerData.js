@@ -42,7 +42,7 @@ function CustomerData() {
       <div className="w-[95vw] h-[70vh]  mx-auto  bg-white ">
           
           {/* buttons */}
-        <div className="flex gap-1 ">
+        <div className="flex ml-5 gap-1 ">
           <div >
             <button onClick={handleClick} className={ ` mt-2 ml-4 p-1 bg-yellow-300 font-semibold rounded-lg wrapper 
             ${(statusMontlyPlan === true) ? 'text-white' : 'text-black'}`}
@@ -82,8 +82,8 @@ function CustomerData() {
 
 
         <footer className="mb-2">
-          <button className="bg-yellow-400 px-8 border border-black outline-8 rounded-md
-          ">
+          <button className="bg-yellow-400 px-8 border border-black outline-8  
+          font-semibold">
             Close
           </button>
         </footer>

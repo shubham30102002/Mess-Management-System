@@ -1,9 +1,11 @@
 import React from 'react'
 
-const GenSuccess = ({onClose}) => {
-    const handleClose = (e) => {
-        if (e.target.id === "wrapper") onClose();
-    };
+const AttendanceSuccess = ({onClose}) => {
+  const handleClose = (e) => {
+    if (e.target.id === "wrapper") onClose();
+  };
+
+
 
   return (
     <div
@@ -22,7 +24,7 @@ const GenSuccess = ({onClose}) => {
       <div className="p-3 flex flex-col gap-1">
         <div >
           <div className="mb-1 px-4">
-            <label>Genrate Successfully</label>
+            <label>Successfully</label>
           </div>
 
             <button
@@ -35,7 +37,8 @@ const GenSuccess = ({onClose}) => {
         </div>
       </div>
     </div>
+ 
   )
 }
 
-export default GenSuccess
+export default AttendanceSuccess
