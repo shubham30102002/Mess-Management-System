@@ -1,28 +1,32 @@
-import { TaskBar } from "./TaskBar";
+import { useNavigate } from "react-router-dom";
+import TaskBar from "./TaskBar";
 import { useDispatch } from "react-redux";
-import { setLogin } from "../store/slices/authSlice";
+// import { setLogin } from "../store/slices/authSlice";
 
-function AdminLogin({ isVisible, onClose }) {
-  const dispatch = useDispatch();
-
+function AdminLogin({ isVisible, onClose, setAdmin }) {
+  // const dispatch = useDispatch();
+  //const nevigate = useNavigate();
   if (!isVisible) return null;
 
   const handleClose = (e) => {
     if (e.target.id === "wrapper") onClose();
   };
 
-  const handleSubmit = () => {
-    dispatch(setLogin(
-      {
-        user: {
-          name: "Mr. Admin",
-          email: "admin@gmail.com",
-        },
-        token: "1234567890",
-        role: "admin",
-      }
-    ));
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setAdmin(true);
+    //nevigate("/customerData");
+    // dispatch(
+    //   setLogin({
+    //     user: {
+    //       name: "Mr. Admin",
+    //       email: "admin@gmail.com",
+    //     },
+    //     token: "1234567890",
+    //     role: "admin",
+    //   })
+    // );
+  };
 
   return (
     <div
@@ -40,7 +44,7 @@ function AdminLogin({ isVisible, onClose }) {
         </div>
 
         <div className="p-3 flex flex-col gap-1">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={(e) => handleSubmit(e)}>
             <div className="mb-1 px-4">
               <label>Email id :</label>
               <br />
@@ -65,13 +69,14 @@ function AdminLogin({ isVisible, onClose }) {
               <button
                 type="submit"
                 className="bg-[#FFD33C] px-8 border border-black outline-8 rounded-md"
-                
               >
                 Login
-                <TaskBar/>
               </button>
 
-              <button className="bg-[#FFD33C] px-8 border border-black outline-8 rounded-md">
+              <button
+                onClick={onClose}
+                className="bg-[#FFD33C] px-8 border border-black outline-8 rounded-md"
+              >
                 Close
               </button>
             </div>

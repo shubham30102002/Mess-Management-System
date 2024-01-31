@@ -9,9 +9,6 @@ export const RegisterForm = ({
 }) => {
   if (!isVisible) return null;
 
- 
-
-
   const handleClose = (e) => {
     if (e.target.id === "wrapper") onClose();
     setShowRegisterSuccessfully(false);
@@ -19,7 +16,6 @@ export const RegisterForm = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // alert("Register Successfully");
     setShowRegisterSuccessfully(true);
   };
 
@@ -91,7 +87,7 @@ export const RegisterForm = ({
             </button>
 
             <button
-              // onClick={(e) => handleClose(e)}
+              onClick={onClose}
               className="bg-yellow-400 px-8 border border-black outline-8 rounded-md"
             >
               Close
