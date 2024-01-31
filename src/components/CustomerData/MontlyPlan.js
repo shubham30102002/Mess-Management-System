@@ -1,9 +1,11 @@
 import React from 'react'
 
-export const TaskBar = () => {
+function MontlyPlan() {
   return (
     <div>
-        
+        Montly
     </div>
   )
 }
+
+export default MontlyPlan
