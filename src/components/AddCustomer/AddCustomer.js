@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Payment from "./Payment";
 import { Link } from "react-router-dom";
-import FingerPrint from "../../Assets/fingerprint.jpg";
+import FingerPrint from "../../Assets/FingerprintGif.gif";
 
 function AddCustomer() {
   const [diningStatus, setDiningStatus] = useState(true);
@@ -88,7 +88,7 @@ function AddCustomer() {
                     <div>
                       <label>FingerPrint/ Biometric Details:</label>
                       <br />
-                      <div className="relative bg-zinc-200  w-[90%] h-[10rem]
+                      <div className="relative  w-[90%] h-[10rem] 
                       flex justify-center items-center border border-black z-2">
                         <img className="object-contain h-36 w-96"
                           src={FingerPrint} alt="Fingerprint" />
@@ -104,7 +104,7 @@ function AddCustomer() {
             <button
               onClick={() => setShowPayment(true)}
               className="bg-yellow-400 px-8 py-1 border border-black outline-none
-            rounded-sm"
+            rounded-sm"   
             >
               {" "}
               Continue
