@@ -39,7 +39,7 @@ function CustomerData() {
         Customer Database
       </header>
 
-      <div className="w-[95vw] h-[70vh]  mx-auto  bg-white ">
+      <div className="w-[95vw] h-[70vh]  mx-auto  bg-white relative">
           
           {/* buttons */}
         <div className="flex ml-5 gap-1 ">
@@ -82,8 +82,7 @@ function CustomerData() {
 
 
         <footer className="mb-2">
-          <button className="bg-yellow-400 px-8 border border-black outline-8  
-          font-semibold">
+          <button className="absolute right-5 bottom-3 bg-yellow-400 px-8 py-1 border border-black outline-none rounded-sm">
             Close
           </button>
         </footer>

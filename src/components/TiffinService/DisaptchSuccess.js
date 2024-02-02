@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const DisaptchSuccess = () => {
   return (
@@ -10,7 +10,7 @@ const DisaptchSuccess = () => {
         Dispatch Successfully...
       </h1>
     </div>
-  )
-}
+  );
+};
 
-export default DisaptchSuccess
+export default DisaptchSuccess;

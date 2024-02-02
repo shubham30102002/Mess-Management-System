@@ -5,9 +5,9 @@ import CustomerData from "./components/CustomerData/CustomerData";
 import AddCustomer from "./components/AddCustomer/AddCustomer";
 import TiffinService from "./components/TiffinService/TiffinService";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import CustomerProfile from "./components/CustomerProfile/CustomerProfile";
+import CustomerProfile from "./components/CustomerData/CustomerProfile";
 import ItemsContainer from "./components/ItemsContainer";
-import MontlyPlan from "./components/CustomerData/MontlyPlan";
+
 
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
         ></Route>
         <Route path="/customerData" element={<CustomerData />}></Route>
         <Route path="/addCustomer" element={<AddCustomer />}></Route>
-        <Route path="/customerProfile" element={<CustomerProfile />}></Route>
+        <Route path="/CustomerProfile" element={<CustomerProfile />}></Route>
         <Route path="/tiffinService" element={<TiffinService />}></Route>
       </Routes>
     </BrowserRouter>
