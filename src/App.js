@@ -5,7 +5,7 @@ import CustomerData from "./components/CustomerData/CustomerData";
 import AddCustomer from "./components/AddCustomer/AddCustomer";
 import TiffinService from "./components/TiffinService/TiffinService";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import CustomerProfile from "./components/CustomerData/CustomerProfile";
+import CustomerProfile from "./components/CustomerProfile/CustomerProfile";
 import ItemsContainer from "./components/ItemsContainer";
 
 

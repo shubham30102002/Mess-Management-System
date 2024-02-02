@@ -2,6 +2,7 @@ import { useState } from "react";
 import MontlyPlan from "./MontlyPlan";
 import GenExcel from "./GenExcel";
 import AddHelper from "./AddHelper";
+import { Link } from "react-router-dom";
 
 
 function CustomerData() {
@@ -82,9 +83,13 @@ function CustomerData() {
 
 
         <footer className="mb-2">
-          <button className="absolute right-5 bottom-3 bg-yellow-400 px-8 py-1 border border-black outline-none rounded-sm">
+        <Link
+            className=" absolute bottom-3 right-10  bg-yellow-400 px-8 py-1
+             border border-black outline-none rounded-sm"
+            to="/"
+          >
             Close
-          </button>
+          </Link>
         </footer>
       </div>
     </div>

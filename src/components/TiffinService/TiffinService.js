@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import DisaptchSuccess from "./DisaptchSuccess";
+import { Link } from "react-router-dom";
+
 
 function TiffinService() {
   const [dispatchBtn, setDispatchBtn] = useState(true);
@@ -8,6 +10,8 @@ function TiffinService() {
   const [showGenBtn, setShowGenBtn] = useState(true);
 
   const [showSuccessDispatch, setShowSuccessDispatch] = useState(false);
+
+  const [showTiffinDispatch, setShowTiffinDispatch] = useState(false);
 
   const handleDispatch = () => {
     setDispatchBtn(true);
@@ -40,7 +44,7 @@ function TiffinService() {
           <button
             className={`bg-yellow-400 px-7 py-1 border border-black rounded-lg  
             ${dailyTiffinBtn ? "text-white" : "text-black"}`}
-            onClick={handleDailyTiffin}
+            onClick={ handleDailyTiffin } 
           >
             List of daily tiffin
           </button>
@@ -59,7 +63,7 @@ function TiffinService() {
           </div>
         ) : (
           <div>
-            <div className=" relative bg-yellow-400 w-[40vw] h-[40vh]">
+            <div className=" relative bg-yellow-400 w-[98%] h-[40vh] mr-4 ml-4">
               <div className="flex justify-between">
                 <div className=" text-3xl">Today's Dispatch</div>
                 <button
@@ -84,14 +88,15 @@ function TiffinService() {
           </div>
         )}
 
+
         <div>
-          <button
+          <Link
             className=" absolute bottom-8 right-10  bg-yellow-400 px-9 py-1 border border-black rounded-lg  
                font-semibold"
-            onClick={() => setShowGenBtn(true)}
+            to="/"
           >
             Close
-          </button>
+          </Link>
         </div>
       </div>
     </div>

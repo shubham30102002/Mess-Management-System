@@ -7,7 +7,7 @@ const AttendanceSuccess = ({ onClose }) => {
 
   return (
     <div
-      className=" fixed inset-0 bg-opacity-25 backdrop-blur-sm 
+      className=" fixed inset-0 bg-opacity-30 backdrop-blur-lg 
   flex justify-center items-center pl-2 pr-2 pb-2"
       id="wrapper"
       onClick={handleClose}

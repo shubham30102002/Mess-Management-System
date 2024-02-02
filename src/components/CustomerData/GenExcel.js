@@ -11,8 +11,8 @@ const GenExcel = () => {
   return (
     <div>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <div className="relative p-4">
-          <div className="flex items-center gap-2">
+        <div className=" p-4">
+          <div className="relative flex items-center gap-2">
             <input type="checkbox" class="accent-yellow-400 h-5 w-5" />
             <label
               className="bg-yellow-300 px-9 py-0 border border-black rounded-md  
@@ -28,10 +28,9 @@ const GenExcel = () => {
               Tiffin
             </label>
           </div>
-          <div className=" absolute top-96 bottom-0">
+          <div className=" absolute bottom-3">
             <button
-              className=" absolute  bottom-0 bg-yellow-300 px-9 py-0 border border-black rounded-md  
-            font-semibold"
+              className=" absolute  bottom-0 bg-yellow-400 px-8 py-1 border border-black outline-none rounded-sm"
             >
               Generate
             </button>

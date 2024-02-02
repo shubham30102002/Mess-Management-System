@@ -9,7 +9,7 @@ const AddHelper = () => {
   };
 
   return (
-    <div className="relative ml-10 mt-5">
+    <div className=" ml-10 mt-5">
       <div className="mb-5 flex flex-row gap-1">
         <input type="checkbox" class="accent-yellow-400 h-5 w-5" />
         <label
@@ -19,11 +19,9 @@ const AddHelper = () => {
           Attendance
         </label>
       </div>
-      {showAttendanceSuccess ? (
-        <AttendanceSuccess onClose={() => setShowAttendanceSuccess(false)} />
-      ) : null}
+   
       <form onSubmit={(e) => handleSubmit(e)}>
-        <div className="flex flex-row gap-24">
+        <div className="relative flex flex-row gap-24">
           <div className="w-[50%]">
             <label>Name :</label>
             <br />
@@ -36,19 +34,23 @@ const AddHelper = () => {
 
           <div className="w-[50%]  mx-28">
             <div className="px-4 mb-5">FingerPrint/ Biometric Details:</div>
-            <div className="bg-zinc-900 opacity-15 w-[90%] h-[18rem] border border-black"></div>
+            <div className="bg-zinc-200  w-[90%] h-[10rem] border border-black z-2"></div>
           </div>
         </div>
 
         <div>
-          <button
-            className="absolute left-8 bottom-5 bg-yellow-300 px-9 py-0 border border-black rounded-md  
-            font-semibold"
+          <button type="Submit"
+           className=" absolute  bottom-3 bg-yellow-400 px-8 py-1 border
+            border-black outline-none rounded-sm"
           >
             Attendance
           </button>
         </div>
       </form>
+
+      {showAttendanceSuccess ? (
+        <AttendanceSuccess onClose={() => setShowAttendanceSuccess(false)} />
+      ) : null}
     </div>
   );
 };
