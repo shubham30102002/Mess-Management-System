@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AttendanceSuccess from "./AttendanceSuccess";
+import FingerPrint from "../../Assets/fingerprint.jpg";
 
 const AddHelper = () => {
   const [showAttendanceSuccess, setShowAttendanceSuccess] = useState(false);
@@ -19,7 +20,7 @@ const AddHelper = () => {
           Attendance
         </label>
       </div>
-   
+
       <form onSubmit={(e) => handleSubmit(e)}>
         <div className="relative flex flex-row gap-24">
           <div className="w-[50%]">
@@ -34,13 +35,17 @@ const AddHelper = () => {
 
           <div className="w-[50%]  mx-28">
             <div className="px-4 mb-5">FingerPrint/ Biometric Details:</div>
-            <div className="bg-zinc-200  w-[90%] h-[10rem] border border-black z-2"></div>
+            <div className="relative bg-zinc-200  w-[90%] h-[10rem] 
+            flex justify-center items-center border border-black z-2">
+              <img className="object-contain h-36 w-96 " 
+              src={FingerPrint} alt="Fingerprint" />
+            </div>
           </div>
         </div>
 
         <div>
           <button type="Submit"
-           className=" absolute  bottom-3 bg-yellow-400 px-8 py-1 border
+            className=" absolute  bottom-3 bg-yellow-400 px-8 py-1 border
             border-black outline-none rounded-sm"
           >
             Attendance

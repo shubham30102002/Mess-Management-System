@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Payment from "./Payment";
 import { Link } from "react-router-dom";
+import FingerPrint from "../../Assets/fingerprint.jpg";
 
 function AddCustomer() {
   const [diningStatus, setDiningStatus] = useState(true);
@@ -33,17 +34,15 @@ function AddCustomer() {
           <div className="flex flex-col gap-1 m-5">
             <div className="flex  gap-8">
               <button
-                className={`${
-                  diningStatus ? "bg-yellow-300 px-2 border border-black" : null
-                }`}
+                className={`${diningStatus ? "bg-yellow-300 px-2 border border-black" : null
+                  }`}
                 onClick={handleDinigChange}
               >
                 Dining
               </button>
               <button
-                className={`${
-                  tiffinStatus ? "bg-yellow-300 px-2 border border-black" : null
-                }`}
+                className={`${tiffinStatus ? "bg-yellow-300 px-2 border border-black" : null
+                  }`}
                 onClick={handleTiffinChange}
               >
                 Tiffin
@@ -89,7 +88,11 @@ function AddCustomer() {
                     <div>
                       <label>FingerPrint/ Biometric Details:</label>
                       <br />
-                      <div className="bg-zinc-200 w-[90%] h-[30vh]"></div>
+                      <div className="relative bg-zinc-200  w-[90%] h-[10rem]
+                      flex justify-center items-center border border-black z-2">
+                        <img className="object-contain h-36 w-96"
+                          src={FingerPrint} alt="Fingerprint" />
+                      </div>
                     </div>
                   ) : null}
                 </div>

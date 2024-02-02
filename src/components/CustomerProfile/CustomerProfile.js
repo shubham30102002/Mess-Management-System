@@ -27,8 +27,9 @@ function CustomerProfile() {
             </button>
           </div>
         ) : (
-          <div className="" >
-            <form className="pl-8 flex flex-col gap-2">
+          <div className="overflow-y-auto" >
+            <form className=" pl-8 flex flex-col gap-2">
+            <div className="overflow-y-auto">
               <div>
                 <label>Name:</label>
                 <br />
@@ -59,6 +60,8 @@ function CustomerProfile() {
                 {/* plan category remaining balance */}
                 {/* <p>plan <span>${}</span></p> */}
               </div>
+
+            </div>
 
             </form>
           </div>
