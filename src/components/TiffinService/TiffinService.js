@@ -26,6 +26,14 @@ function TiffinService() {
   const handleDispatchList = () => {
     setShowSuccessDispatch(true);
   };
+
+  const handleSuccess = () => {
+    setShowSuccessDispatch(true);
+    setTimeout(() => {
+      setShowSuccessDispatch(false);
+    }, 2000);
+  };
+
   return (
     <div className="w-[95vw] h-[70vh] mx-auto mt-5 ">
       <header className="bg-yellow-300 w-[95vw] h-[8vh] text-2xl font-bold py-2 px-10 rounded-tl-full ">
@@ -85,7 +93,10 @@ function TiffinService() {
                   <button
                     className="absolute right-5 bottom-5 bg-yellow-400 px-8 border border-black outline-8  
                 font-semibold"
-                    onClick={handleDispatchList}
+                    onClick={() => {
+                      handleDispatchList();
+                      handleSuccess();
+                    }}
                   >
                     Dispatch
                   </button>

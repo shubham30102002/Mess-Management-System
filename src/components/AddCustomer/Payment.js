@@ -6,7 +6,7 @@ import PaymentSuccess from "./PaymentSuccess";
 
 
 function Payment() {
-  const [statusCashPayment, setStatusCashPayment] = useState(false);
+  const [statusCashPayment, setStatusCashPayment] = useState(true);
   const [statusOnlinePayment, setStatusOnlinePayment] = useState(false);
 
   const [showPaymentDone, setShowPaymentDone] = useState(false);
