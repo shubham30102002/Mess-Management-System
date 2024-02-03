@@ -34,21 +34,21 @@ function Payment() {
       <button className="bg-yellow-400 ml-2 mt-2 border border-black px-1 w-[20vh] h-[4vh]">
         Payment
       </button>
-      <hr className="mt-8 border-t-black" />
-      <hr className=" border-t-black w-[210vh] fixed bottom-36 " />
+      <hr className="mt-4 border-t-black" />
+      {/* <hr className=" border-t-black w-[210vh] fixed bottom-36 " /> */}
 
 
       <div className="flex gap-5 p-9">
         <button
           onClick={handleClickCashMode}
-          className={`bg-yellow-400 ml-2 mt-2 border border-black px-1 w-[20vh] h-[4vh]
+          className={`bg-yellow-400 ml-2  border border-black px-1 w-[20vh] h-[4vh]
         ${statusCashPayment === true ? "text-white" : "text-black"}`}
         >
           Cash Mode
         </button>
         <button
           onClick={handleClickOnlineMode}
-          className={`bg-yellow-400 ml-2 mt-2 border border-black px-1 w-[20vh] h-[4vh]
+          className={`bg-yellow-400 ml-2 border border-black px-1 w-[20vh] h-[4vh]
        ${statusOnlinePayment === true ? "text-white" : "text-black"}`}
         >
           Online Mode

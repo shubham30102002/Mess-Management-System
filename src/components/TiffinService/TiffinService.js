@@ -44,13 +44,13 @@ function TiffinService() {
           <button
             className={`bg-yellow-400 px-7 py-1 border border-black rounded-lg  
             ${dailyTiffinBtn ? "text-white" : "text-black"}`}
-            onClick={ handleDailyTiffin } 
+            onClick={handleDailyTiffin}
           >
             List of daily tiffin
           </button>
         </div>
 
-        {showGenBtn ? (
+        {(dispatchBtn && showGenBtn) ? (
           <div>
             <button
               className="bg-yellow-400 px-8 border border-black outline-8  
@@ -62,33 +62,39 @@ function TiffinService() {
             </button>
           </div>
         ) : (
-          <div>
-            <div className=" relative bg-yellow-400 w-[98%] h-[40vh] mr-4 ml-4">
-              <div className="flex justify-between">
-                <div className=" text-3xl">Today's Dispatch</div>
-                <button
-                  className="text-3xl px-2 font-semibold"
-                  onClick={() => setShowGenBtn(true)}
-                >
-                  X
-                </button>
-              </div>
-
-              <div>
-                <button
-                  className="absolute right-5 bottom-5 bg-yellow-400 px-8 border border-black outline-8  
-            font-semibold"
-                  onClick={handleDispatchList}
-                >
-                  Dispatch
-                </button>
-              </div>
-              {showSuccessDispatch ? <DisaptchSuccess /> : null}
-            </div>
-          </div>
+          null
         )}
 
+        {
+          showGenBtn ? (
+            null
+          ) : (
+            <div>
+              <div className=" relative bg-yellow-400 w-[98%] h-[40vh] mr-4 ml-4">
+                <div className="flex justify-between">
+                  <div className=" text-3xl">Today's Dispatch</div>
+                  <button
+                    className="text-3xl px-2 font-semibold"
+                    onClick={() => setShowGenBtn(true)}
+                  >
+                    X
+                  </button>
+                </div>
 
+                <div>
+                  <button
+                    className="absolute right-5 bottom-5 bg-yellow-400 px-8 border border-black outline-8  
+                font-semibold"
+                    onClick={handleDispatchList}
+                  >
+                    Dispatch
+                  </button>
+                </div>
+                {showSuccessDispatch ? <DisaptchSuccess /> : null}
+              </div>
+            </div>
+          )
+        }
         <div>
           <Link
             className=" absolute bottom-8 right-10  bg-yellow-400 px-9 py-1 border border-black rounded-lg  

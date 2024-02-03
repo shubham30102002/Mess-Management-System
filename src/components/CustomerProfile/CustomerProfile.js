@@ -10,10 +10,10 @@ function CustomerProfile() {
         Customer Profile
       </header>
 
-      <div className=" relative w-[95vw] h-[70vh]  mx-auto  bg-white  ">
+      <div className=" relative w-[95vw] h-[70vh]  mx-auto  overflow-hidden bg-white  ">
         <input
           placeholder="search student name"
-          className=" w-[90%]   bg-zinc-200 border border-black rounded-lg mx-20 my-10 p-1"
+          className=" w-[90%] bg-zinc-200 border border-black rounded-lg mx-20 my-3 p-1"
         />
         
         {searchButton ? (
@@ -27,9 +27,9 @@ function CustomerProfile() {
             </button>
           </div>
         ) : (
-          <div className="overflow-y-auto" >
+          <div >
             <form className=" pl-8 flex flex-col gap-2">
-            <div className="overflow-y-auto">
+            <div className="mb-1">
               <div>
                 <label>Name:</label>
                 <br />
@@ -43,12 +43,12 @@ function CustomerProfile() {
 
                 <label>Permanent Address:</label>
                 <br />
-                <textarea className="w-[40vw] bg-zinc-300 border border-black outline-8"></textarea>
+                <textarea className="w-[40vw] h-[8vh] bg-zinc-300 border border-black outline-8"></textarea>
                 <br />
 
                 <label>Temporary Address:</label>
                 <br />
-                <textarea className="w-[40vw]  bg-zinc-300 border border-black outline-8"></textarea>
+                <textarea className="w-[40vw] h-[8vh] bg-zinc-300 border border-black outline-8"></textarea>
                 <br />
 
                 <label>Aadhar Number:</label>
@@ -81,4 +81,4 @@ function CustomerProfile() {
       );
 }
 
-      export default CustomerProfile;
+export default CustomerProfile;
